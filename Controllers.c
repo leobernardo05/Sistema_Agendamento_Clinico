@@ -1,0 +1,1 @@
+// Irá ter todas as minhas funções e serem executadas

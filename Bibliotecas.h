@@ -1,0 +1,1 @@
+// recebe as structs e o prototipo da funções
