@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include "Bibliotecas.h"
 
 // Sistema Inteligente para Agendamento  de Consultas Medica
 int main(){
