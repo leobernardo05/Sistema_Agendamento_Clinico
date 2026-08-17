@@ -7,7 +7,7 @@ int main(){
 	int op, i;
 	
 	do{
-		printf("\n\nDigite a opcao desejada: \n1 - Cadastrar novo agendamento\n2 - Listar todos os agendamentos\n3 - Procurar um agendamento específico\n4 - Atulizar um agendamento específico\n5- Excluir um agendamento específico\n0 - Para encerrar\n");
+		printf("\n\nDigite a opcao desejada: \n1 - Cadastrar novo agendamento\n2- Cadastrar novo medico\n3-Cadastrar novo paciente\n4 - Listar todos os agendamentos\n5 - Procurar um agendamento específico\n6 - Atulizar um agendamento específico\n7- Excluir um agendamento específico\n0 - Para encerrar\n");
 		scanf("%d", &op);
 		
 		switch(op){
@@ -17,21 +17,31 @@ int main(){
 			}break;
 
 			case 2:{
+                    //adicionar um nome Agendamento 
+					cadastrar_medico();
+			}break;
+
+			case 3:{
+                    //adicionar um nome Agendamento 
+					cadastrar_paciente();
+			}break;
+
+			case 4:{
                     // Listar todos os agendamentos
 					listar_atendimentos();
 			}break;
 			
-			case 3:{
+			case 5:{
                     // Ler um agendamento especifico a partir do seu ID
 					procurar_atendimentos();	
 			}break;
 			
-			case 4:{
+			case 6:{
                     // Atualizar um agendamento a partir do seu ID
 				    atualizar_atendimentos();
 			}break;
 
-			case 5:{
+			case 7:{
                     // Atualizar um agendamento a partir do seu ID
 				    excluir_atendimentos();
 			}break;

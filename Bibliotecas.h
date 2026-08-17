@@ -2,6 +2,8 @@
 
 // -------------- escopo das funções --------
 void cadastrar_atendimentos();
+void cadastrar_medico();
+void cadastrar_paciente();
 void listar_atendimentos();
 void procurar_atendimentos();
 void atualizar_atendimentos();
@@ -58,12 +60,12 @@ int prioridade; // 0 normal; 1 urgente (para “inteligente”/fila)
 
 typedef struct {
 Medico *itens; int qtd, cap;
-} VetMedicos;
+} VetMedicos; //vetor de médicos (vetor dinâmico)
 
 typedef struct {
 Paciente *itens; int qtd, cap;
-} VetPacientes;
+} VetPacientes; //vetor de pacientes (vetor dinâmico)
 
 typedef struct {
 Consulta *itens; int qtd, cap;
-} VetConsultas;
+} VetConsultas; //vetor de consultas (vetor dinâmico)
