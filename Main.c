@@ -17,12 +17,12 @@ int main(){
 			}break;
 
 			case 2:{
-                    //adicionar um nome Agendamento 
+                    //adicionar novo medico 
 					cadastrar_medico();
 			}break;
 
 			case 3:{
-                    //adicionar um nome Agendamento 
+                    //adicionar novo paciente 
 					cadastrar_paciente();
 			}break;
 
