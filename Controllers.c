@@ -10,14 +10,33 @@ int qtde = 0;
 Consulta consultas[MAX];
 
 
-// cadastrar novos atendimentos
+// funcao para salvar os dados de um agendamento no fim do arquivo atendimentos.txt, sendo passado como parametro a struct consulta
+void salvando_atendimentos(Consulta c){
+	FILE *arq;
+	arq = fopen("atendimentos.txt", "a");
+	fprintf(arq, "%d %d %d %d %d %d %d %d %d\n", c.id, c.idMedico, c.idPaciente, c.data.dia, c.data.mes, c.data.ano, c.inicio.hora, c.inicio.minuto, c.fim.hora, c.fim.minuto);
+	fclose(arq);
+}
+
+
+//preencher o cadastro de novos atendimentos, funcao chamada no main.c no meu menu, para cadastrar novos atendimentos
 void cadastrar_atendimentos(){
     // struct declarada para armazenar os dados do novo agendamento
     Consulta novo;
     
 }
 
-// cadastrar novos medicos
+
+// funcao para salvar os dados de um medico no fim do arquivo medicos.txt, sendo passado como parametro a struct medico
+void salvando_medicos(Medico m){
+	FILE *arq;
+	arq = fopen("medicos.txt", "a");
+	fprintf(arq, "%d %s %d %d %d %d %d %d\n", m.id, m.nome, m.especialidade, m.inicioManha.hora, m.inicioManha.minuto, m.fimManha.hora, m.fimManha.minuto, m.inicioTarde.hora, m.inicioTarde.minuto, m.fimTarde.hora, m.fimTarde.minuto);
+	fclose(arq);
+}
+
+
+// cadastrar novos medicos, funcao chamada no meu menu do main.c, para cadastrar novos medicos
 void cadastrar_medico(){
 	// structs declarada para armazenar os dados do novo agendamento
 	Medico novo;
@@ -56,7 +75,15 @@ void cadastrar_medico(){
 	
 }
 
-// cadastrar novos pacientes
+// salvando o cadastro de pacientes no arquivo sendo passado como parametro a struct paciente
+void salvando_pacientes(Paciente p){
+	FILE *arq;
+	arq = fopen("pacientes.txt", "a");
+	fprintf(arq, "%d %s %s\n", p.id, p.nome, p.contato);
+	fclose(arq);
+}
+
+// cadastrar novos pacientes, função que é chamada no main.c no meu menu, para cadastrar novos pacientes
 void cadastrar_paciente(){
     // struct declarada para armazenar os dados do novo agendamento
     Consulta novo;
